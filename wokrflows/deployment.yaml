@@ -1,0 +1,21 @@
+name: Lint, Test, Deploy
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  jobs:
+    lint:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v3
+        - name: Lint code
+          run: npm lint
+    test:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v3
+        - name: Lint code
+          run: npm test
+
+
