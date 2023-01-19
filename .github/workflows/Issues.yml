@@ -1,6 +1,6 @@
 name: Lint, Test, Deploy
 on:
-  issue:
+  issues:
     types: [opened, synchronize, reopened]
 
 jobs:
