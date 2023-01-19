@@ -50,6 +50,6 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: text for deploy
-          run: echo deployed
+          run: echo "Deployed"
 
 

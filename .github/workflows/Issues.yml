@@ -1,0 +1,14 @@
+name: Lint, Test, Deploy
+on:
+  issue:
+    types: [opened, synchronize, reopened]
+
+jobs:
+    deploy:
+      needs: build
+      runs-on: ubuntu-latest
+      steps:
+      - name: Deploy
+        run: echo "${{ toJSON(github) }}"
+
+
