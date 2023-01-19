@@ -1,14 +1,12 @@
-name: Lint, Test, Deploy
-on:
-  issues:
-    types: [opened, synchronize, reopened]
+name: Handle issues
+on: issues
 
 jobs:
-    deploy:
+    info:
       needs: build
       runs-on: ubuntu-latest
       steps:
-      - name: Deploy
-        run: echo "${{ toJSON(github) }}"
+      - name: Output details
+        run: echo "${{ toJSON(github.event) }}"
 
 
